@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Work types are listed in descending naturalPriority, the order they appear
+     in the Work tab from left to right. -->
+
+<!-- 1250 - Nurse -->
+
+	<WorkTypeDef>
+		<defName>DOL_Nurse</defName>
+		<labelShort>Nurse</labelShort>
+		<pawnLabel>Nurse</pawnLabel>
+		<gerundLabel>Nursing</gerundLabel>
+		<description>Care for the sick, bring them food, cheer them up, and perform assigned duties. Nurses will care for colonists, prisoners and animals.</description>
+		<verb>Care for</verb>
+		<naturalPriority>1250</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Medicine</li>
+		</relevantSkills>
+		<workTags>
+			<li>Caring</li>
+			<li>Commoner</li>
+			<li>AllWork</li>
+		</workTags>
+	</WorkTypeDef>
+
+<!-- 975 - Butcher -->
+
+	<WorkTypeDef>
+		<defName>DOL_Butcher</defName>
+		<labelShort>Butcher</labelShort>
+		<pawnLabel>Butcherer</pawnLabel>
+		<gerundLabel>Butchering</gerundLabel>
+		<description>Create kibble and butcher meat.</description>
+		<verb>Butcher</verb>
+		<naturalPriority>975</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Cooking</li>
+		</relevantSkills>
+		<workTags>
+			<li>Cooking</li>
+			<li>ManualSkilled</li>
+			<li>Commoner</li>
+			<li>AllWork</li>
+		</workTags>
+	</WorkTypeDef>
+
+<!-- 925 - Deconstruct -->
+
+	<WorkTypeDef>
+		<defName>DOL_Deconstruct</defName>
+		<labelShort>Deconstruct</labelShort>
+		<pawnLabel>Deconstructor</pawnLabel>
+		<gerundLabel>Deconstructing</gerundLabel>
+		<description>Uninstall or deconstruct buildings, objects, floors and roofs.</description>
+		<verb>Deconstruct</verb>
+		<naturalPriority>925</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Construction</li>
+		</relevantSkills>
+		<workTags>
+			<li>ManualSkilled</li>
+			<li>Commoner</li>
+			<li>Constructing</li>
+			<li>AllWork</li>
+		</workTags>
+	</WorkTypeDef>
+
+<!-- 875 - Repair -->
+
+	<WorkTypeDef>
+		<defName>DOL_Repair</defName>
+		<labelShort>Repair</labelShort>
+		<pawnLabel>Repairer</pawnLabel>
+		<gerundLabel>Repairing</gerundLabel>
+		<description>Repair damaged or broken-down buildings and objects.</description>
+		<verb>Repair</verb>
+		<naturalPriority>875</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Construction</li>
+		</relevantSkills>
+		<workTags>
+			<li>ManualSkilled</li>
+			<li>Commoner</li>
+			<li>Constructing</li>
+			<li>AllWork</li>
+		</workTags>
+	</WorkTypeDef>
+
+</Defs>

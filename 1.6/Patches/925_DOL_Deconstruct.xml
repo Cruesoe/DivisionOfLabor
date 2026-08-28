@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!-- 925 - DOL_Deconstruct -->
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			
+		<!-- Biotech Mechanoids Patch -->
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+					<value>
+						<li>DOL_Deconstruct</li>
+					</value>
+				</match>
+			</li>
+			
+			<li MayRequire="imranfish.xmlextensions" Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+				<match Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+					<xpath>/Defs/ThingDef/race [mechEnabledWorkTypes/li [text()="Construction"] ]</xpath>
+					<compare>Both</compare>
+					<value>
+						<mechWorkTypePriorities>
+							<DOL_Deconstruct>3</DOL_Deconstruct>
+						</mechWorkTypePriorities>
+					</value>
+				</match>
+			</li>
+			
+		<!-- Anomaly DLC - Fill In Pit -->
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "FillIn"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "FillIn"]/priorityInType</xpath>
+				<value>
+					<priorityInType>3000</priorityInType>
+				</value>
+			</li>
+			
+		<!-- Core - Uninstall -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "Uninstall"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Remove Roofs -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DeconstructForBlueprint"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Remove Roofs -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "RemoveRoofs"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Vehicle Framework - Disassemble Vehicle -->
+			
+			<li MayRequire="SmashPhil.VehicleFramework" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DisassembleVehicle"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Deconstruct -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "Deconstruct"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Construct Remove Floors -->
+						
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "ConstructRemoveFloors"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Construct Remove Foundations -->
+						
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "ConstructRemoveFoundations"]/workType</xpath>
+				<value>
+					<workType>DOL_Deconstruct</workType>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+				
+</Patch>

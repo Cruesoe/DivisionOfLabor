@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!-- 875 - DOL_Repair -->
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			
+		<!-- Biotech Mechanoids Patch -->
+			
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+					<value>
+						<li>DOL_Repair</li>
+					</value>
+				</match>
+			</li>
+			
+			<li MayRequire="imranfish.xmlextensions" Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes [li [text()="Construction"] ]</xpath>
+				<match Class="XmlExtensions.PatchOperationSafeAddOrReplace">
+					<xpath>/Defs/ThingDef/race [mechEnabledWorkTypes/li [text()="Construction"] ]</xpath>
+					<compare>Both</compare>
+					<value>
+						<mechWorkTypePriorities>
+							<DOL_Repair>3</DOL_Repair>
+						</mechWorkTypePriorities>
+					</value>
+				</match>
+			</li>
+			
+		<!-- Vanilla Gravship Expanded - Maintain Gravship Structure -->
+
+			<li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "VGE_MaintainGrav"]/workType</xpath>
+				<value>
+					<workType>DOL_Repair</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Fix Broken Down Buildings -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "FixBrokenDownBuilding"]/workType</xpath>
+				<value>
+					<workType>DOL_Repair</workType>
+				</value>
+			</li>
+			
+		<!-- Vehicle Framework - Repair Vehicle -->
+			
+			<li MayRequire="SmashPhil.VehicleFramework" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "RepairVehicle"]/workType</xpath>
+				<value>
+					<workType>DOL_Repair</workType>
+				</value>
+			</li>
+			
+		<!-- Core - Repair -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "Repair"]/workType</xpath>
+				<value>
+					<workType>DOL_Repair</workType>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+				
+
+<!-- Biotech - gate this work behind the same age as Construction (10). -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+			<value>
+				<DOL_Repair>10</DOL_Repair>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

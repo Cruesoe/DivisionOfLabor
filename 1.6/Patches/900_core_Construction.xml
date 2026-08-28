@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 900 - Construction -->
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+
+		<!-- Core - Update Worktype Description -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName="Construction"]/description</xpath>
+				<value>
+					<description>Build things that you've designated.</description>
+				</value>
+			</li>
+
+		<!-- Core - Smooth Walls -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="ConstructSmoothWalls"]/priorityInType</xpath>
+				<value>
+					<priorityInType>20</priorityInType>
+				</value>
+			</li>
+
+		<!-- Core - Smooth Floors -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="ConstructSmoothFloors"]/priorityInType</xpath>
+				<value>
+					<priorityInType>10</priorityInType>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+<!-- Simple Improve - fold improving back into Construction as its lowest job -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="WorkType_Improving"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="WorkGiver_Improve"]/workType</xpath>
+					<value>
+						<workType>Construction</workType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="WorkGiver_Improve"]/priorityInType</xpath>
+					<value>
+						<priorityInType>5</priorityInType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkTypeDef[defName="WorkType_Improving"]/naturalPriority</xpath>
+					<value>
+						<naturalPriority>1</naturalPriority>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="WorkType_Improving"]</xpath>
+					<value>
+						<visible>false</visible>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 650 - PlantCutting -->
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+	<operations>
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/WorkTypeDef[defName = "PlantCutting"]/naturalPriority</xpath>
+				<value>
+					<naturalPriority>650</naturalPriority>
+				</value>
+		</li>
+	</operations>
+	</Operation>
+</Patch>

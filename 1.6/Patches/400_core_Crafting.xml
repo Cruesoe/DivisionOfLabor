@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 400 - Crafting -->
+<Patch>
+
+<!-- Recycle This - fold recycling and destroying into Crafting as its lowest jobs -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="RecycleThis_Recycle"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="RecycleThis_Recycle" or defName="RecycleThis_Destroy"]/workType</xpath>
+					<value>
+						<workType>Crafting</workType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/WorkGiverDef[defName="RecycleThis_Recycle" or defName="RecycleThis_Destroy"]/priorityInType</xpath>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/WorkGiverDef[defName="RecycleThis_Recycle" or defName="RecycleThis_Destroy"]/priorityInType</xpath>
+						<value>
+							<priorityInType>5</priorityInType>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/WorkGiverDef[defName="RecycleThis_Recycle" or defName="RecycleThis_Destroy"]</xpath>
+						<value>
+							<priorityInType>5</priorityInType>
+						</value>
+					</nomatch>
+				</li>
+
+			<!-- Drop the now-dead work type from any mech that had it. Mechs with
+			     Crafting (Fabricor) pick the jobs up through Crafting instead. -->
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="RecycleThis_Recycle"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef/race/mechEnabledWorkTypes/li[text()="RecycleThis_Recycle"]</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="RecycleThis_Recycle"]</xpath>
+					<value>
+						<visible>false</visible>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

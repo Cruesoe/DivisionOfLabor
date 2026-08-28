@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 1250 - DOL_Nurse -->
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			<li Class="PatchOperationConditional">		
+				<xpath>/Defs/ThingDef[race/mechEnabledWorkTypes/li="Doctor"]/race/mechEnabledWorkTypes</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[race/mechEnabledWorkTypes/li="Doctor"]/race/mechEnabledWorkTypes</xpath>
+					<value>
+						<li>DOL_Nurse</li>
+					</value>
+				</match>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorRescue"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorRescue"]/priorityInType</xpath>
+				<value>
+					<priorityInType>500</priorityInType>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs</xpath>
+				<value>					
+					<WorkGiverDef>
+						<defName>DOL_TakeToBedToOperate</defName>
+						<label>take patients to bed for operations</label>
+						<giverClass>WorkGiver_TakeToBedToOperate</giverClass>
+						<workType>DOL_Nurse</workType>
+						<priorityInType>499</priorityInType>
+						<verb>take to operate</verb>
+						<gerund>taking to operate</gerund>
+						<requiredCapacities>
+							<li>Manipulation</li>
+						</requiredCapacities>
+					</WorkGiverDef>					
+				</value>
+			</li>			
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="DoctorFeedHumanlikes" or defName="FeedPrisoner" or defName="DeliverFoodToPrisoner"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "FeedHemogen"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "FeedHemogen"]/priorityInType</xpath>
+				<value>
+					<priorityInType>78</priorityInType>
+				</value>
+			</li>
+
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="DBHAdministerFluids" or defName="DBHAdministerFluidsWarden"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="DBHAdministerFluids" or defName="DBHAdministerFluidsWarden"]/priorityInType</xpath>
+				<value>
+					<priorityInType>77</priorityInType>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorFeedAnimals"]/priorityInType</xpath>
+				<value>
+					<priorityInType>55</priorityInType>
+				</value>
+			</li>
+
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="washChild" or defName="washPatient" or defName="DocCleanBedpan"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+			<li MayRequire="Dubwise.DubsBadHygiene" Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "washChild"]/priorityInType</xpath>
+				<value>
+					<priorityInType>55</priorityInType>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "VisitSickPawn"]/workType</xpath>
+				<value>
+					<workType>DOL_Nurse</workType>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+<!-- Biotech - gate this work behind the same age as Doctor (10). -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+			<value>
+				<DOL_Nurse>10</DOL_Nurse>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

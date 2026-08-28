@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 1100 - Warden -->
+<Patch>
+
+<!-- Core - Update Worktype Description -->
+<!-- Prisoner feeding now belongs to DOL_Nurse, so the vanilla wording is no longer accurate. -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/WorkTypeDef[defName="Warden"]/description</xpath>
+		<value>
+			<description>Manage, chat with, and recruit prisoners, and handle other delicate social duties.</description>
+		</value>
+	</Operation>
+
+<!-- Hospitality - fold the Diplomat work type into Warden -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="Diplomat"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="Recruiter" or defName="Diplomat"]/workType</xpath>
+					<value>
+						<workType>Warden</workType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings/Diplomat</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings/Diplomat</xpath>
+					</match>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="Diplomat"]</xpath>
+					<value>
+						<visible>false</visible>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+<!-- Therapy - fold the Therapist work type into Warden -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="Therapist"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="Therapy"]/workType</xpath>
+					<value>
+						<workType>Warden</workType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="Therapist"]</xpath>
+					<value>
+						<visible>false</visible>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
