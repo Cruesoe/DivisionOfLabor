@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 150 - Dark Study (folded into Research) -->
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="DarkStudy"]</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+
+			<!-- Studying becomes Research's first job, above hacking (130). -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="StudyInteract"]/workType</xpath>
+					<value>
+						<workType>Research</workType>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="StudyInteract"]/priorityInType</xpath>
+					<value>
+						<priorityInType>140</priorityInType>
+					</value>
+				</li>
+
+			<!-- The category is now empty, so hide it. -->
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="DarkStudy"]</xpath>
+					<value>
+						<visible>false</visible>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

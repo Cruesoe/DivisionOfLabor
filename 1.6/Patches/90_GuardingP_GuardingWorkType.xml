@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 90 - GuardingP_GuardingWorkType -->
+<Patch>
+
+<!-- Keyz Allow Utilities - hand the finish-off job to Guarding Pawns' guard duty,
+     but only when both mods are actually present. -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/WorkTypeDef[defName="GuardingP_GuardingWorkType"]</xpath>
+		<match Class="PatchOperationConditional">
+			<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]/workType</xpath>
+				<value>
+					<workType>GuardingP_GuardingWorkType</workType>
+				</value>
+			</match>
+		</match>
+	</Operation>
+
+</Patch>

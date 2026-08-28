@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<!-- 1300 - Doctor -->
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			
+		<!-- Core - Update Worktype Description -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkTypeDef[defName = "Doctor"]/description</xpath>
+				<value>
+					<description>Treat the sick. Doctors will care for colonists, prisoners and animals.</description>
+				</value>
+			</li>
+			
+		<!-- Core - Doctor Tend to Self Emergency -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorTendToSelfEmergency"]/priorityInType</xpath>
+				<value>
+					<priorityInType>500</priorityInType>
+				</value>
+			</li>
+			
+		<!-- Core - Doctor Tend to Self -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorTendToSelf"]/priorityInType</xpath>
+				<value>
+					<priorityInType>495</priorityInType>
+				</value>
+			</li>
+			
+		<!-- Core - Doctor Tend to Animals -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/WorkGiverDef[defName = "DoctorTendToAnimals"]/priorityInType</xpath>
+				<value>
+					<priorityInType>99</priorityInType>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+				
+</Patch>

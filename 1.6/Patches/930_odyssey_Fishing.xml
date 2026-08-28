@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+	<operations>
+		<li MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationReplace">
+			<xpath>/Defs/WorkTypeDef[defName = "Fishing"]/naturalPriority</xpath>
+				<value>
+					<naturalPriority>930</naturalPriority>
+				</value>
+		</li>
+	</operations>
+	</Operation>
+</Patch>

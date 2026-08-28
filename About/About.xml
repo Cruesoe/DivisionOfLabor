@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Division of Labor</name>
+	<author>Cruesoe</author>
+	<packageId>cruesoe.divisionoflabor</packageId>
+	<description>Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
+
+New work types:
+  Nurse - feeding, rescuing and tending to the comfort of patients, split out of Doctor and Warden. Doctors keep the surgery and medicine.
+  Butcher - butcher table bills, split out of Cooking.
+  Deconstruct - deconstructing, uninstalling, and removing floors and roofs, split out of Construction.
+  Repair - repairing and fixing broken-down buildings, split out of Construction.
+
+Reordered so related jobs sit together in the Work tab:
+  Fishing moved next to Hunting.
+  Plant cutting moved next to Growing.
+  Dark study folded into Research as its first job.
+
+Supported mods are folded in rather than left as separate columns: Hospitality and Therapy join Warden, Simple Improve joins Construction, and Recycle This joins Crafting.
+
+Safe to add to an existing save. Removing it mid-save will reset the affected work priorities.</description>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<incompatibleWith>
+		<li>FrozenSnowFox.ComplexJobs</li>
+		<li>DarthSergeant.NurseJob</li>
+		<li>Fozzy422.SmoothWallsFirst</li>
+	</incompatibleWith>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
+		<li>Ludeon.RimWorld.Odyssey</li>
+		<li>brrainz.harmony</li>
+		<li>Dubwise.DubsBadHygiene</li>
+		<li>imranfish.xmlextensions</li>
+		<li>Zei33.SimpleImprove</li>
+		<li>Orion.Hospitality</li>
+		<li>Orion.Therapy</li>
+		<li>Mlie.RecycleThis</li>
+		<li>keyz182.KeyzAllowUtilities</li>
+		<li>SmashPhil.VehicleFramework</li>
+		<li>vanillaexpanded.gravship</li>
+	</loadAfter>
+</ModMetaData>
