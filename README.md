@@ -42,12 +42,20 @@ Folded in rather than left as separate columns, and only when the mod is present
 
 Detection is by `PatchOperationConditional` on the def being patched, not by mod name or packageId, so forks and renames keep working.
 
+## Manual priorities
+
+New colonies start with the Work tab's **manual priorities** turned on. Splitting work into more, narrower jobs is only worth doing if you can order them.
+
+This is a default, not a lock — the checkbox works as normal and turning it off sticks. It applies to new games only; loading an existing colony never changes the setting. Implemented as a `GameComponent` overriding `StartedNewGame`, so there is **no Harmony dependency** — the assembly references only `Assembly-CSharp`.
+
 ## Layout
 
 ```
 1.6/Defs/WorkTypes.xml     the four work types
+1.6/Assemblies/            built output of Source/ (committed, so the mod runs without a build)
 1.6/Patches/               one file per work type, named <naturalPriority>_<source>_<name>
 Branding/                  preview image source + generator (not shipped)
+Source/                    one GameComponent, net472, references Assembly-CSharp only
 deploy.ps1                 copies 1.6/ and About/ to the RimWorld Mods folder
 ```
 
