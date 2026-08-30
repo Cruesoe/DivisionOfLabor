@@ -18,6 +18,8 @@ Reordered so related jobs sit together in the Work tab:
 
 Supported mods are folded in rather than left as separate columns: Hospitality and Therapy join Warden, Simple Improve joins Construction, and Recycle This joins Crafting.
 
+New colonies start with manual work priorities switched on; you can turn them off in the Work tab as usual. Loading an existing colony never changes the setting.
+
 Safe to add to an existing save. Removing it mid-save will reset the affected work priorities.</description>
 	<supportedVersions>
 		<li>1.6</li>
