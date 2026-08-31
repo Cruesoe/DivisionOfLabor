@@ -1,54 +1,49 @@
-Vanilla work types are broad. Your surgeon is also the one carrying kibble to the huskies, and the pawn you want raising walls keeps wandering off to pull down an old shed instead. You can set a priority, but you cannot say what the job actually is.
-
-So this splits the big work types into smaller ones and puts them in a sensible order. No new mechanics, no settings menu, nothing to learn. Just more columns in the Work tab, and they do what they say.
+Splits RimWorld's broadest work types into smaller ones and reorders the Work tab. No new mechanics, no settings menu.
 
 [h1]New work types[/h1]
 [list]
-[*][b]Nurse.[/b] Rescuing the downed, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Split out of Doctor and Warden.
-[*][b]Butcher.[/b] Butcher table bills, meat and kibble. Split out of Cooking.
-[*][b]Deconstruct.[/b] Deconstructing, uninstalling, and pulling up floors, roofs and foundations. Split out of Construction.
-[*][b]Repair.[/b] Repairing and fixing broken-down buildings. Split out of Construction.
+[*][b]Nurse[/b] — rescuing, feeding colonists, prisoners and animals, hemogen, visiting the sick. Out of Doctor and Warden.
+[*][b]Butcher[/b] — butcher table bills. Out of Cooking.
+[*][b]Deconstruct[/b] — deconstruct, uninstall, remove floors, roofs and foundations. Out of Construction.
+[*][b]Repair[/b] — repair, fix broken-down buildings. Out of Construction.
+[*]Doctor keeps all tending and surgery. Construction keeps building.
+[*]Both Doctor and Nurse can carry a patient to bed for an operation.
 [/list]
 
-Doctors keep every bit of tending and surgery, so your surgeon stays a surgeon. Construction keeps building. Both Doctors and Nurses will carry a patient to bed for an operation, because waiting on one specific pawn for that is how people bleed out.
-
-[h1]A tidier Work tab[/h1]
+[h1]Work tab[/h1]
 [list]
-[*][b]Fishing[/b] moved next to Hunting.
-[*][b]Plant cutting[/b] moved next to Growing.
-[*][b]Dark study[/b] folded into Research as its first job, instead of a column of its own.
-[*][b]Smoothing[/b] demoted within Construction, and walls are now smoothed before floors.
-[*]New colonies start with [b]manual priorities[/b] switched on. Splitting work into narrower jobs is only worth doing if you can order them. It is only a default, the checkbox still works, and loading an existing colony never changes your setting.
+[*]Fishing moved next to Hunting.
+[*]Plant cutting moved next to Growing.
+[*]Dark study folded into Research as its first job.
+[*]Smoothing demoted within Construction; walls before floors.
+[*]New colonies default to manual priorities. Existing saves keep your setting.
 [/list]
 
 [h1]Mechanoids and children[/h1]
 [list]
-[*]Constructoids pick up Deconstruct and Repair, Fabricors pick up Butcher, and Paramedics pick up Nurse.
-[*]Children can nurse at 10 and butcher at 7, matching the ages vanilla already uses for Doctor and Cooking. Repair waits until 10, same as Construction.
-[*]Deconstruct has no age limit. Pulling a wall down is a fine way to learn how one goes up.
+[*]Constructoid gains Deconstruct and Repair, Fabricor gains Butcher, Paramedic gains Nurse.
+[*]Nurse from age 10, Butcher from 7, Repair from 10. Deconstruct has no age limit.
 [/list]
 
-[h1]Other mods[/h1]
-These are folded into existing columns rather than left as separate ones, and only when you actually have the mod.
+[h1]Mod support[/h1]
+Folded into existing columns, only when the mod is present. Detected by job, not by mod name, so forks and continued versions work.
 [list]
-[*][b]Hospitality.[/b] Recruiting and entertaining guests join Warden.
-[*][b]Therapy.[/b] Therapy joins Warden.
-[*][b]Simple Improve.[/b] Improving joins Construction as its lowest job.
-[*][b]Recycle This.[/b] Recycling and destroying join Crafting.
-[*][b]Dubs Bad Hygiene.[/b] Washing patients, bedpans and administering fluids join Nurse.
-[*][b]Vanilla Books Expanded.[/b] Writing moved next to Art.
-[*][b]Vehicle Framework.[/b] Repairing and disassembling vehicles join Repair and Deconstruct.
-[*][b]Vanilla Gravship Expanded.[/b] Maintaining the gravship joins Repair.
-[*][b]Guarding Pawns.[/b] Keyz Allow Utilities' finish off job joins guard duty.
+[*][b]Hospitality[/b] — recruiting and entertaining guests join Warden.
+[*][b]Therapy[/b] — joins Warden.
+[*][b]Simple Improve[/b] — improving joins Construction as its lowest job.
+[*][b]Recycle This[/b] — recycle and destroy join Crafting.
+[*][b]Dubs Bad Hygiene[/b] — washing, bedpans and fluids join Nurse.
+[*][b]Vanilla Books Expanded[/b] — writing moved next to Art.
+[*][b]Vehicle Framework[/b] — vehicle repair and disassembly join Repair and Deconstruct.
+[*][b]Vanilla Gravship Expanded[/b] — gravship maintenance joins Repair.
+[*][b]Guarding Pawns[/b] — Keyz Allow Utilities' finish off joins guard duty.
 [/list]
-
-Detection is done by looking for the jobs themselves rather than by mod name, so forks and continued versions work without me having to chase them.
 
 [h1]Compatibility[/h1]
 [list]
-[*]Safe to add to an ongoing save. Removing it mid-save will reset the affected work priorities.
-[*]Supports all DLC, and needs none of them.
-[*]Do not use with [b]Complex Jobs[/b], [b]Nurse Job[/b] or [b]Smooth Walls First[/b]. They change the same work types.
+[*]Safe to add mid-save. Removing it resets the affected work priorities.
+[*]Supports all DLC, requires none.
+[*]Incompatible with Complex Jobs, Nurse Job, and Smooth Walls First.
 [/list]
 
 [h1]Source[/h1]
