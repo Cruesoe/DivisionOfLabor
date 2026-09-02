@@ -43,7 +43,7 @@ Folded into existing columns, only when the mod is present. Detected by job, not
 [list]
 [*]Safe to add mid-save. Removing it resets the affected work priorities.
 [*]Supports all DLC, requires none.
-[*]Incompatible with Complex Jobs, Nurse Job, and Smooth Walls First.
+[*]Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.
 [/list]
 
 [h1]Source[/h1]
