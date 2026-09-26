@@ -68,6 +68,14 @@
 						<visible>false</visible>
 					</value>
 				</li>
+
+				<!-- Simple Improve's code gates on this hidden work type, so start it active on every pawn -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/WorkTypeDef[defName="WorkType_Improving"]</xpath>
+					<value>
+						<alwaysStartActive>true</alwaysStartActive>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
