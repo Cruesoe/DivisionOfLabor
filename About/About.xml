@@ -3,6 +3,7 @@
 	<name>Division of Labor</name>
 	<author>Cruesoe</author>
 	<packageId>cruesoe.divisionoflabor</packageId>
+	<modVersion>260926</modVersion>
 	<description>Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
 
 New work types:
