@@ -16,6 +16,15 @@
 					</value>
 				</li>
 
+			<!-- Recycle This moves smelter bills to its own work type; return them to Crafting -->
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/WorkGiverDef[defName="DoBillsSmelter"]/workType</xpath>
+					<value>
+						<workType>Crafting</workType>
+					</value>
+				</li>
+
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/WorkGiverDef[defName="RecycleThis_Recycle" or defName="RecycleThis_Destroy"]/priorityInType</xpath>
 					<match Class="PatchOperationReplace">
