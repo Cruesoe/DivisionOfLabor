@@ -9,11 +9,29 @@
 		<xpath>/Defs/WorkTypeDef[defName="GuardingP_GuardingWorkType"]</xpath>
 		<match Class="PatchOperationConditional">
 			<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]</xpath>
-			<match Class="PatchOperationReplace">
-				<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]/workType</xpath>
-				<value>
-					<workType>GuardingP_GuardingWorkType</workType>
-				</value>
+			<match Class="PatchOperationSequence">
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]/workType</xpath>
+						<value>
+							<workType>GuardingP_GuardingWorkType</workType>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/WorkTypeDef[defName="KAU_FinishingOff"]/visible</xpath>
+						<value>
+							<visible>false</visible>
+						</value>
+					</li>
+
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/WorkGiverDef[defName="KAU_FinishOff"]/priorityInType</xpath>
+						<value>
+							<priorityInType>130</priorityInType>
+						</value>
+					</li>
+				</operations>
 			</match>
 		</match>
 	</Operation>
