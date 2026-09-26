@@ -1,50 +1,37 @@
-Splits RimWorld's broadest work types into smaller ones and reorders the Work tab. No new mechanics, no settings menu.
+Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
 
 [h1]New work types[/h1]
 [list]
-[*][b]Nurse[/b] — rescuing, feeding colonists, prisoners and animals, hemogen, visiting the sick. Out of Doctor and Warden.
-[*][b]Butcher[/b] — butcher table bills. Out of Cooking.
-[*][b]Deconstruct[/b] — deconstruct, uninstall, remove floors, roofs and foundations. Out of Construction.
-[*][b]Repair[/b] — repair, fix broken-down buildings. Out of Construction.
-[*]Doctor keeps all tending and surgery. Construction keeps building.
-[*]Both Doctor and Nurse can carry a patient to bed for an operation.
+[*][b]Nurse[/b] — rescuing, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
+[*][b]Butcher[/b] — butcher table bills, for meat and kibble.
+[*][b]Deconstruct[/b] — deconstructing, uninstalling, and removing floors, roofs and foundations.
+[*][b]Repair[/b] — repairing and fixing broken-down buildings. Construction keeps building.
 [/list]
 
-[h1]Work tab[/h1]
+[h1]Tidier Work tab[/h1]
 [list]
-[*]Fishing moved next to Hunting.
-[*]Plant cutting moved next to Growing.
-[*]Dark study folded into Research as its first job.
-[*]Smoothing demoted within Construction; walls before floors.
-[*]New colonies default to manual priorities. Existing saves keep your setting.
+[*]Fishing sits next to Hunting, and plant cutting next to Growing.
+[*]Dark study joins Research.
+[*]Smoothing is Construction's lowest job, walls before floors.
+[*]New colonies start with manual priorities turned on.
 [/list]
 
-[h1]Mechanoids and children[/h1]
+[h1]Supported mods[/h1]
+Folded in rather than left as separate columns:
 [list]
-[*]Constructoid gains Deconstruct and Repair, Fabricor gains Butcher, Paramedic gains Nurse.
-[*]Nurse from age 10, Butcher from 7, Repair from 10. Deconstruct has no age limit.
-[/list]
-
-[h1]Mod support[/h1]
-Folded into existing columns, only when the mod is present. Detected by job, not by mod name, so forks and continued versions work.
-[list]
-[*][b]Hospitality[/b] — recruiting and entertaining guests join Warden.
-[*][b]Therapy[/b] — joins Warden.
+[*][b]Hospitality[/b] — Recruiter and Diplomat join Warden.
+[*][b]Therapy[/b] — therapy joins Warden.
 [*][b]Simple Improve[/b] — improving joins Construction as its lowest job.
-[*][b]Recycle This[/b] — recycle and destroy join Crafting.
-[*][b]Dubs Bad Hygiene[/b] — washing, bedpans and fluids join Nurse.
-[*][b]Vanilla Books Expanded[/b] — writing moved next to Art.
+[*][b]Recycle This[/b] — recycling and destroying join Crafting.
+[*][b]Vanilla Books Expanded[/b] — writing moves next to Art.
+[*][b]Dubs Bad Hygiene[/b] — patient care joins Nurse.
 [*][b]Vehicle Framework[/b] — vehicle repair and disassembly join Repair and Deconstruct.
-[*][b]Vanilla Gravship Expanded[/b] — gravship maintenance joins Repair.
-[*][b]Guarding Pawns[/b] — Keyz Allow Utilities' finish off joins guard duty.
+[*][b]VE Gravship[/b] — gravship maintenance joins Repair.
+[*][b]Guarding Pawns + Keyz Allow Utilities[/b] — finishing off joins guard duty.
 [/list]
 
 [h1]Compatibility[/h1]
-[list]
-[*]Safe to add mid-save. Removing it resets the affected work priorities.
-[*]Supports all DLC, requires none.
-[*]Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.
-[/list]
+Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.
 
 [h1]Source[/h1]
 [url=https://github.com/Cruesoe/DivisionOfLabor]github.com/Cruesoe/DivisionOfLabor[/url] — MIT.
