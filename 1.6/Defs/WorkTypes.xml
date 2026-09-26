@@ -15,9 +15,6 @@
 		<verb>Care for</verb>
 		<naturalPriority>1250</naturalPriority>
 		<requireCapableColonist>true</requireCapableColonist>
-		<relevantSkills>
-			<li>Medicine</li>
-		</relevantSkills>
 		<workTags>
 			<li>Caring</li>
 			<li>Commoner</li>
