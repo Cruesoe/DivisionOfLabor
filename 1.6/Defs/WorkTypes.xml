@@ -15,6 +15,7 @@
 		<verb>Care for</verb>
 		<naturalPriority>1250</naturalPriority>
 		<requireCapableColonist>true</requireCapableColonist>
+		<alwaysStartActive>true</alwaysStartActive>
 		<workTags>
 			<li>Caring</li>
 			<li>Commoner</li>
