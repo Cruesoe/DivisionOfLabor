@@ -24,6 +24,7 @@ New colonies start with manual work priorities switched on; you can turn them of
 Safe to add to an existing save. Removing it mid-save will reset the affected work priorities.</description>
 	<supportedVersions>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<incompatibleWith>
 		<li>FrozenSnowFox.ComplexJobs</li>
