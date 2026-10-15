@@ -1,14 +1,14 @@
-Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
+[b]Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.[/b]
 
-[h1]New work types[/h1]
+[h2]New work types[/h2]
 [list]
-[*][b]Nurse[/b] — rescuing, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
-[*][b]Butcher[/b] — butcher table bills, for meat and kibble.
-[*][b]Deconstruct[/b] — deconstructing, uninstalling, and removing floors, roofs and foundations.
-[*][b]Repair[/b] — repairing and fixing broken-down buildings. Construction keeps building.
+[*][b]Nurse[/b] covers rescuing, feeding colonists, prisoners and animals, hemogen, and visiting the sick, while Doctors keep tending and surgery.
+[*][b]Butcher[/b] covers butcher table bills, for meat and kibble.
+[*][b]Deconstruct[/b] covers deconstructing, uninstalling, and removing floors, roofs and foundations.
+[*][b]Repair[/b] covers repairing and fixing broken-down buildings, while Construction keeps building.
 [/list]
 
-[h1]Tidier Work tab[/h1]
+[h2]Tidier Work tab[/h2]
 [list]
 [*]Fishing sits next to Hunting, and plant cutting next to Growing.
 [*]Dark study joins Research.
@@ -16,22 +16,18 @@ Splits RimWorld's broadest work types into focused jobs, so you can assign speci
 [*]New colonies start with manual priorities turned on.
 [/list]
 
-[h1]Supported mods[/h1]
-Folded in rather than left as separate columns:
+[h2]Compatibility[/h2]
+These mods' jobs are folded in rather than left as separate columns:
 [list]
-[*][b]Hospitality[/b] — Recruiter and Diplomat join Warden.
-[*][b]Therapy[/b] — therapy joins Warden.
-[*][b]Simple Improve[/b] — improving joins Construction as its lowest job.
-[*][b]Recycle This[/b] — recycling and destroying join Crafting.
-[*][b]Vanilla Books Expanded[/b] — writing moves next to Art.
-[*][b]Dubs Bad Hygiene[/b] — patient care joins Nurse.
-[*][b]Vehicle Framework[/b] — vehicle repair and disassembly join Repair and Deconstruct.
-[*][b]VE Gravship[/b] — gravship maintenance joins Repair.
-[*][b]Guarding Pawns + Keyz Allow Utilities[/b] — finishing off joins guard duty.
+[*][b]Hospitality[/b]: Recruiter and Diplomat join Warden.
+[*][b]Therapy[/b]: therapy joins Warden.
+[*][b]Simple Improve[/b]: improving joins Construction as its lowest job.
+[*][b]Recycle This[/b]: recycling and destroying join Crafting.
+[*][b]Vanilla Books Expanded[/b]: writing moves next to Art.
+[*][b]Dubs Bad Hygiene[/b]: patient care joins Nurse.
+[*][b]Vehicle Framework[/b]: vehicle repair and disassembly join Repair and Deconstruct.
+[*][b]VE Gravship[/b]: gravship maintenance joins Repair.
+[*][b]Guarding Pawns + Keyz Allow Utilities[/b]: finishing off joins guard duty.
 [/list]
-
-[h1]Compatibility[/h1]
-Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.
-
-[h1]Source[/h1]
-[url=https://github.com/Cruesoe/DivisionOfLabor]github.com/Cruesoe/DivisionOfLabor[/url] — MIT.
+Not compatible with Complex Jobs, Nurse Job, or Smooth Walls then Floor, because they change the same work types.
+Safe to add to an existing save.
