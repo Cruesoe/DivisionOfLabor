@@ -1,15 +1,15 @@
 # Branding
 
-Build assets for the Steam preview image. **Not shipped** — `deploy.ps1` ships an
-allowlist (`1.6`, `About`), so this folder stays out of the Workshop download
-automatically.
+Build assets for the Steam preview image. **Not shipped**: deploy copies only the
+runtime folders (`About`, `Common`, `1.6`, `1.7`) and `LoadFolders.xml`, so this
+folder stays out of the Workshop download.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `preview-source.png` | Original 1280x698 artwork. The tick-box row is read out of this — treat it as the master art. |
-| `compose-preview.ps1` | Regenerates `About/preview.png` from it. |
+| `compose-preview.ps1` | Regenerates `About/Preview.png` from it. |
 
 ## Regenerating
 

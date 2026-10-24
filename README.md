@@ -4,9 +4,9 @@ Splits RimWorld's broadest work types into focused jobs, so you can assign speci
 
 ## New work types
 
-- **Nurse** — rescuing, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
+- **Nurse** — rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
 - **Butcher** — butcher table bills, for meat and kibble.
-- **Deconstruct** — deconstructing, uninstalling, and removing floors, roofs and foundations.
+- **Deconstruct** — deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
 - **Repair** — repairing and fixing broken-down buildings. Construction keeps building.
 
 ## Tidier Work tab

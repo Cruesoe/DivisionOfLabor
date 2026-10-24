@@ -1,10 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  
+
   <PropertyGroup>
     <RootNamespace>DivisionOfLabor</RootNamespace>
     <AssemblyName>DivisionOfLabor</AssemblyName>
     <Nullable>enable</Nullable>
+    <!-- No Unity modules are used -->
     <UnityModules></UnityModules>
     <UseHarmony>false</UseHarmony>
-  </PropertyGroup></Project>
+  </PropertyGroup>
 
+</Project>

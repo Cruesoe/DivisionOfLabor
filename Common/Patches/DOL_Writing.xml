@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!-- 420 - Vanilla Books Expanded -->
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/WorkTypeDef[defName="VBE_Writing"]</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/WorkTypeDef[defName="VBE_Writing"]/naturalPriority</xpath>
-			<value>
-				<naturalPriority>420</naturalPriority>
-			</value>
-		</match>
-	</Operation>
+
+  <!-- Vanilla Books Expanded - move writing next to Art -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/WorkTypeDef[defName="VBE_Writing"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/WorkTypeDef[defName="VBE_Writing"]/naturalPriority</xpath>
+      <value>
+        <naturalPriority>420</naturalPriority>
+      </value>
+    </match>
+  </Operation>
+
 </Patch>

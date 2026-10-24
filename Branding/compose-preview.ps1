@@ -1,4 +1,4 @@
-# Regenerates About/preview.png for Division of Labor.
+# Regenerates About/Preview.png for Division of Labor.
 # Run with no arguments to reproduce the shipped image:
 #     powershell -ExecutionPolicy Bypass -File .\Branding\compose-preview.ps1
 #
@@ -6,7 +6,7 @@
 # (luminance becomes alpha), so they stay the original artwork at any size.
 param(
   [string]$Src    = "$PSScriptRoot\preview-source.png",
-  [string]$Out    = "$PSScriptRoot\..\About\preview.png",
+  [string]$Out    = "$PSScriptRoot\..\About\Preview.png",
   [double]$Cap    = 60,      # title cap height in px
   [double]$BoxW   = 720,     # rendered width of the tick-box row
   [double]$TitleY = 278,     # y centre of the title caps

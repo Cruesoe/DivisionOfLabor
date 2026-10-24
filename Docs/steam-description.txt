@@ -2,9 +2,9 @@
 
 [h2]New work types[/h2]
 [list]
-[*][b]Nurse[/b] covers rescuing, feeding colonists, prisoners and animals, hemogen, and visiting the sick, while Doctors keep tending and surgery.
+[*][b]Nurse[/b] covers rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick, while Doctors keep tending and surgery.
 [*][b]Butcher[/b] covers butcher table bills, for meat and kibble.
-[*][b]Deconstruct[/b] covers deconstructing, uninstalling, and removing floors, roofs and foundations.
+[*][b]Deconstruct[/b] covers deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
 [*][b]Repair[/b] covers repairing and fixing broken-down buildings, while Construction keeps building.
 [/list]
 
