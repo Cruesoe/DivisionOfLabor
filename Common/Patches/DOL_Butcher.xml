@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Biotech - mechs that can cook can also butcher -->
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Cooking"]</xpath>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Cooking"]</xpath>
+          <value>
+            <li>DOL_Butcher</li>
+          </value>
+        </match>
+      </li>
+
+      <!-- Core - butcher table bills -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="DoBillsButcherFlesh"]/workType</xpath>
+        <value>
+          <workType>DOL_Butcher</workType>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+  <!-- Biotech - same minimum age as Cooking (7) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+      <value>
+        <DOL_Butcher>7</DOL_Butcher>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

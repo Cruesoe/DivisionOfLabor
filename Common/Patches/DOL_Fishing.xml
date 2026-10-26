@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Odyssey - move fishing next to Hunting -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/WorkTypeDef[defName="Fishing"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/WorkTypeDef[defName="Fishing"]/naturalPriority</xpath>
+      <value>
+        <naturalPriority>930</naturalPriority>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

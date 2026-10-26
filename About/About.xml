@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Division of Labor</name>
-	<author>Cruesoe</author>
-	<packageId>cruesoe.divisionoflabor</packageId>
-	<modVersion>261015</modVersion>
-	<description>Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
+  <name>Division of Labor</name>
+  <author>Cruesoe</author>
+  <packageId>cruesoe.divisionoflabor</packageId>
+  <modVersion>261015</modVersion>
+  <description>Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
 
 New work types:
-  Nurse - feeding, rescuing and tending to the comfort of patients, split out of Doctor and Warden. Doctors keep the surgery and medicine.
-  Butcher - butcher table bills, split out of Cooking.
-  Deconstruct - deconstructing, uninstalling, and removing floors and roofs, split out of Construction.
-  Repair - repairing and fixing broken-down buildings, split out of Construction.
+  Nurse - rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
+  Butcher - butcher table bills, for meat and kibble.
+  Deconstruct - deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
+  Repair - repairing and fixing broken-down buildings. Construction keeps building.
 
-Reordered so related jobs sit together in the Work tab:
-  Fishing moved next to Hunting.
-  Plant cutting moved next to Growing.
-  Dark study folded into Research as its first job.
+Tidier Work tab:
+  Fishing sits next to Hunting, and plant cutting next to Growing.
+  Dark study joins Research.
+  Smoothing is Construction's lowest job, walls before floors.
+  New colonies start with manual priorities turned on.
 
-Supported mods are folded in rather than left as separate columns: Hospitality and Therapy join Warden, Simple Improve joins Construction, and Recycle This joins Crafting.
+Supported mods are folded in rather than left as separate columns: Hospitality, Therapy, Simple Improve, Recycle This, Vanilla Books Expanded, Dubs Bad Hygiene, Vehicle Framework, VE Gravship, and Guarding Pawns with Keyz' Allow Utilities.
 
-New colonies start with manual work priorities switched on; you can turn them off in the Work tab as usual. Loading an existing colony never changes the setting.
-
-Safe to add to an existing save. Removing it mid-save will reset the affected work priorities.</description>
-	<supportedVersions>
-		<li>1.6</li>
-		<li>1.7</li>
-	</supportedVersions>
-	<incompatibleWith>
-		<li>FrozenSnowFox.ComplexJobs</li>
-		<li>DarthSergeant.NurseJob</li>
-		<li>Fozzy422.SmoothWallsFirst</li>
-	</incompatibleWith>
-	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
-		<li>Ludeon.RimWorld.Anomaly</li>
-		<li>Ludeon.RimWorld.Odyssey</li>
-		<li>brrainz.harmony</li>
-		<li>Dubwise.DubsBadHygiene</li>
-		<li>imranfish.xmlextensions</li>
-		<li>Zei33.SimpleImprove</li>
-		<li>Orion.Hospitality</li>
-		<li>Orion.Therapy</li>
-		<li>Mlie.RecycleThis</li>
-		<li>keyz182.KeyzAllowUtilities</li>
-		<li>SmashPhil.VehicleFramework</li>
-		<li>vanillaexpanded.gravship</li>
-	</loadAfter>
+Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.</description>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <incompatibleWith>
+    <li>FrozenSnowFox.ComplexJobs</li>
+    <li>DarthSergeant.NurseJob</li>
+    <li>Fozzy422.SmoothWallsFirst</li>
+  </incompatibleWith>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>Dubwise.DubsBadHygiene</li>
+    <li>Zei33.SimpleImprove</li>
+    <li>Orion.Hospitality</li>
+    <li>Orion.Therapy</li>
+    <li>Mlie.RecycleThis</li>
+    <li>keyz182.KeyzAllowUtilities</li>
+    <li>Thek.GuardingP</li>
+    <li>VanillaExpanded.VBooksE</li>
+    <li>SmashPhil.VehicleFramework</li>
+    <li>vanillaexpanded.gravship</li>
+  </loadAfter>
 </ModMetaData>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Biotech - mechs that can construct can also repair -->
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Construction"]</xpath>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Construction"]</xpath>
+          <value>
+            <li>DOL_Repair</li>
+          </value>
+        </match>
+      </li>
+
+      <!-- Core - fix broken-down buildings and repair damage -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="FixBrokenDownBuilding" or defName="Repair"]/workType</xpath>
+        <value>
+          <workType>DOL_Repair</workType>
+        </value>
+      </li>
+
+      <!-- Vanilla Gravship Expanded - maintain gravship structure -->
+      <li MayRequire="vanillaexpanded.gravship" Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="VGE_MaintainGrav"]/workType</xpath>
+        <value>
+          <workType>DOL_Repair</workType>
+        </value>
+      </li>
+
+      <!-- Vehicle Framework - repair vehicles -->
+      <li MayRequire="SmashPhil.VehicleFramework" Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="RepairVehicle"]/workType</xpath>
+        <value>
+          <workType>DOL_Repair</workType>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+  <!-- Biotech - same minimum age as Construction (10) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+      <value>
+        <DOL_Repair>10</DOL_Repair>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

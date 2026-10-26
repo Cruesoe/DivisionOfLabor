@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Biotech - mechs that can construct can also deconstruct -->
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Construction"]</xpath>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef/race/mechEnabledWorkTypes[li="Construction"]</xpath>
+          <value>
+            <li>DOL_Deconstruct</li>
+          </value>
+        </match>
+      </li>
+
+      <!-- Core - fill in pits, first in Deconstruct -->
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/WorkGiverDef[defName="FillIn"]</xpath>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>/Defs/WorkGiverDef[defName="FillIn"]/workType</xpath>
+              <value>
+                <workType>DOL_Deconstruct</workType>
+              </value>
+            </li>
+            <li Class="PatchOperationReplace">
+              <xpath>/Defs/WorkGiverDef[defName="FillIn"]/priorityInType</xpath>
+              <value>
+                <priorityInType>120</priorityInType>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </li>
+
+      <!-- Core - uninstall, deconstruct, clear space for blueprints, remove roofs, floors and foundations -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="Uninstall" or defName="DeconstructForBlueprint" or defName="RemoveRoofs" or defName="Deconstruct" or defName="ConstructRemoveFloors" or defName="ConstructRemoveFoundations"]/workType</xpath>
+        <value>
+          <workType>DOL_Deconstruct</workType>
+        </value>
+      </li>
+
+      <!-- Vehicle Framework - disassemble vehicles -->
+      <li MayRequire="SmashPhil.VehicleFramework" Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="DisassembleVehicle"]/workType</xpath>
+        <value>
+          <workType>DOL_Deconstruct</workType>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+  <!-- Biotech - same minimum age as Construction (10) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Human"]/race/lifeStageWorkSettings</xpath>
+      <value>
+        <DOL_Deconstruct>10</DOL_Deconstruct>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

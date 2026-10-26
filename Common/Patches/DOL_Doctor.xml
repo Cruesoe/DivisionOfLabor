@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkTypeDef[defName="Doctor"]/description</xpath>
+        <value>
+          <description>Treat the sick. Doctors will care for colonists, prisoners and animals.</description>
+        </value>
+      </li>
+
+      <!-- Core - tending to self comes first, emergencies before the rest -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="DoctorTendToSelfEmergency"]/priorityInType</xpath>
+        <value>
+          <priorityInType>500</priorityInType>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="DoctorTendToSelf"]/priorityInType</xpath>
+        <value>
+          <priorityInType>495</priorityInType>
+        </value>
+      </li>
+
+      <!-- Core - tend to animals ahead of operations -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="DoctorTendToAnimals"]/priorityInType</xpath>
+        <value>
+          <priorityInType>99</priorityInType>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>

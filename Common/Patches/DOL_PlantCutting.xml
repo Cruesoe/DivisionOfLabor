@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Core - move plant cutting next to Growing -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/WorkTypeDef[defName="PlantCutting"]/naturalPriority</xpath>
+    <value>
+      <naturalPriority>650</naturalPriority>
+    </value>
+  </Operation>
+
+</Patch>
