@@ -4,9 +4,7 @@
     <RootNamespace>DivisionOfLabor</RootNamespace>
     <AssemblyName>DivisionOfLabor</AssemblyName>
     <Nullable>enable</Nullable>
-    <!-- No Unity modules are used -->
-    <UnityModules></UnityModules>
-    <UseHarmony>false</UseHarmony>
+    <UnityModules>CoreModule;IMGUIModule;TextRenderingModule</UnityModules>
   </PropertyGroup>
 
 </Project>

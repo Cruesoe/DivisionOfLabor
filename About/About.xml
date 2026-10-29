@@ -17,20 +17,35 @@ Tidier Work tab:
   Dark study joins Research.
   Smoothing is Construction's lowest job, walls before floors.
   New colonies start with manual priorities turned on.
+  Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
+  Scroll over a priority box to change it.
 
 Supported mods are folded in rather than left as separate columns: Hospitality, Therapy, Simple Improve, Recycle This, Vanilla Books Expanded, Dubs Bad Hygiene, Vehicle Framework, VE Gravship, and Guarding Pawns with Keyz' Allow Utilities.
 
-Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.</description>
+Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, Smooth Walls then Floor, and Compact Work Tab, which is built in.
+
+The Work tab headers and scroll-wheel priorities come from Compact Work Tab by CaptainArbitrary, continued by Mlie, used under the MIT license.</description>
   <supportedVersions>
     <li>1.6</li>
     <li>1.7</li>
   </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
   <incompatibleWith>
     <li>FrozenSnowFox.ComplexJobs</li>
     <li>DarthSergeant.NurseJob</li>
     <li>Fozzy422.SmoothWallsFirst</li>
+    <li>Mlie.CompactWorkTab</li>
+    <li>captainarbitrary.compactworktab</li>
   </incompatibleWith>
   <loadAfter>
+    <li>brrainz.harmony</li>
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Royalty</li>
     <li>Ludeon.RimWorld.Ideology</li>

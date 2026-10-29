@@ -14,6 +14,8 @@
 [*]Dark study joins Research.
 [*]Smoothing is Construction's lowest job, walls before floors.
 [*]New colonies start with manual priorities turned on.
+[*]Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
+[*]Scroll over a priority box to change it.
 [/list]
 
 [h2]Compatibility[/h2]
@@ -29,5 +31,9 @@ These mods' jobs are folded in rather than left as separate columns:
 [*][b]VE Gravship[/b]: gravship maintenance joins Repair.
 [*][b]Guarding Pawns + Keyz Allow Utilities[/b]: finishing off joins guard duty.
 [/list]
-Not compatible with Complex Jobs, Nurse Job, or Smooth Walls then Floor, because they change the same work types.
-Safe to add to an existing save.
+The Work tab headers also work with Priority Master, Work Manager and Grouped Pawns Lists.
+Not compatible with Complex Jobs, Nurse Job, or Smooth Walls then Floor, because they change the same work types, or with Compact Work Tab, which is built in.
+Safe to add to an existing save. Requires Harmony.
+
+[h2]Credits[/h2]
+The Work tab headers and scroll-wheel priorities come from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3250322299]Compact Work Tab[/url] by CaptainArbitrary, continued by Mlie, used under the MIT license.

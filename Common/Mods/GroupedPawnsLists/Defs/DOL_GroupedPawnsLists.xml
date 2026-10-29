@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Grouped Pawns Lists redraws the Work tab; this lets it keep the rotated headers and scroll sideways -->
+  <PawnTableGrouped.CompatibilityInfoDef>
+    <defName>DOL_GroupedPawnsLists</defName>
+    <packageId>cruesoe.divisionoflabor</packageId>
+    <modName>Division of Labor</modName>
+    <tables>
+      <li>
+        <name>Work</name>
+        <compatibility>Supported</compatibility>
+        <config>
+          <allowHScroll>true</allowHScroll>
+        </config>
+      </li>
+    </tables>
+  </PawnTableGrouped.CompatibilityInfoDef>
+
+</Defs>

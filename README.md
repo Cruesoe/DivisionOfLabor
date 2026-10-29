@@ -15,6 +15,8 @@ Splits RimWorld's broadest work types into focused jobs, so you can assign speci
 - Dark study joins Research.
 - Smoothing is Construction's lowest job, walls before floors.
 - New colonies start with manual priorities turned on.
+- Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
+- Scroll over a priority box to change it.
 
 ## Supported mods
 
@@ -32,4 +34,8 @@ Folded in rather than left as separate columns:
 
 ## Compatibility
 
-Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, and Smooth Walls then Floor.
+Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, Smooth Walls then Floor, and Compact Work Tab, which is built in. Also works with Priority Master, Work Manager and Grouped Pawns Lists.
+
+## Credits
+
+The Work tab headers and scroll-wheel priorities come from [Compact Work Tab](https://github.com/emipa606/CompactWorkTab) by CaptainArbitrary, continued by Mlie, used under the MIT license.
