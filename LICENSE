@@ -22,9 +22,9 @@ SOFTWARE.
 
 ---
 
-The Work tab header and scroll-wheel code (Source/WorkTab) and the header preview
-textures (Textures/DivisionOfLabor) are adapted from Compact Work Tab
-(https://github.com/emipa606/CompactWorkTab), under the MIT License above:
+The Work tab header and scroll-wheel code (Source/WorkTab) is adapted from
+Compact Work Tab (https://github.com/emipa606/CompactWorkTab), under the MIT
+License above:
 
 Copyright (c) 2023 Jeffery Harrell
 Some content copyright (c) 2021 krypt-lynx

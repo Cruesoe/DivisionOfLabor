@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+  <DOL_SectionWorkTab>Work tab</DOL_SectionWorkTab>
+  <DOL_ResetAll>Reset to defaults</DOL_ResetAll>
   <DOL_UseScrollWheel>Scroll to change work priorities</DOL_UseScrollWheel>
   <DOL_UseScrollWheelTip>Scroll over a priority box in the Work tab to cycle its priority, or to toggle the work type when manual priorities are off.</DOL_UseScrollWheelTip>
-  <DOL_HeaderOrientation>Work tab headers:</DOL_HeaderOrientation>
+  <DOL_HeaderOrientation>Column headers</DOL_HeaderOrientation>
+  <DOL_HeaderOrientationTip>How the work type names above each column are drawn.</DOL_HeaderOrientationTip>
   <DOL_HeaderInclined>Inclined</DOL_HeaderInclined>
   <DOL_HeaderInclinedTip>Tilts the headers so narrow columns stay readable.</DOL_HeaderInclinedTip>
   <DOL_HeaderVertical>Vertical</DOL_HeaderVertical>
