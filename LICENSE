@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+The Work tab header and scroll-wheel code (Source/WorkTab) is adapted from
+Compact Work Tab (https://github.com/emipa606/CompactWorkTab), under the MIT
+License above:
+
+Copyright (c) 2023 Jeffery Harrell
+Some content copyright (c) 2021 krypt-lynx
