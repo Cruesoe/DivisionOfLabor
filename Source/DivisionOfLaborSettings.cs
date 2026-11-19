@@ -22,6 +22,10 @@ namespace DivisionOfLabor
             HeaderOrientation.Horizontal
         };
 
+        // Orientation labels and tips, translated once per language.
+        private static readonly Dictionary<HeaderOrientation, (string label, string tip)> OrientationText = new Dictionary<HeaderOrientation, (string, string)>();
+        private static LoadedLanguage? orientationTextLanguage;
+
         public static bool UseScrollWheel = true;
         public static HeaderOrientation HeaderOrientation = HeaderOrientation.Inclined;
 
@@ -46,7 +50,7 @@ namespace DivisionOfLabor
             {
                 Find.WindowStack.Add(new FloatMenu(OrientationOptions()));
             }
-            DescriptionRow(list, ("DOL_Header" + HeaderOrientation + "Tip").Translate());
+            DescriptionRow(list, GetOrientationText(HeaderOrientation).tip);
 
             Rect scroll = list.GetRect(RowHeight);
             Widgets.DrawHighlightIfMouseover(scroll);
@@ -110,7 +114,22 @@ namespace DivisionOfLabor
 
         private static string OrientationLabel(HeaderOrientation orientation)
         {
-            return ("DOL_Header" + orientation).Translate();
+            return GetOrientationText(orientation).label;
+        }
+
+        private static (string label, string tip) GetOrientationText(HeaderOrientation orientation)
+        {
+            if (orientationTextLanguage != LanguageDatabase.activeLanguage)
+            {
+                OrientationText.Clear();
+                orientationTextLanguage = LanguageDatabase.activeLanguage;
+            }
+            if (!OrientationText.TryGetValue(orientation, out (string label, string tip) text))
+            {
+                text = (("DOL_Header" + orientation).Translate(), ("DOL_Header" + orientation + "Tip").Translate());
+                OrientationText[orientation] = text;
+            }
+            return text;
         }
     }
 }

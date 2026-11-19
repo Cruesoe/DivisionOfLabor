@@ -7,7 +7,7 @@
   <description>Splits RimWorld's broadest work types into focused jobs, so you can assign specialists instead of generalists.
 
 New work types:
-  Nurse - rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
+  Nurse - rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery. Unlike Warden, slaves can nurse, so they can feed prisoners.
   Butcher - butcher table bills, for meat and kibble.
   Deconstruct - deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
   Repair - repairing and fixing broken-down buildings. Construction keeps building.
@@ -16,11 +16,14 @@ Tidier Work tab:
   Fishing sits next to Hunting, and plant cutting next to Growing.
   Dark study joins Research.
   Smoothing is Construction's lowest job, walls before floors.
+  Doctors tend their own wounds first, and tend animals before doing operations.
   New colonies start with manual priorities turned on.
   Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
   Scroll over a priority box to change it.
 
 Supported mods are folded in rather than left as separate columns: Hospitality, Therapy, Simple Improve, Recycle This, Vanilla Books Expanded, Dubs Bad Hygiene, Vehicle Framework, VE Gravship, and Guarding Pawns with Keyz' Allow Utilities.
+
+UI Rethemed - Work's templates include the new work types, plus field rescue, diplomacy, shopkeeping and Haul+ from Search and Rescue, These Are Our People, RimMarket and Keyz' Allow Utilities.
 
 Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, Smooth Walls then Floor, and Compact Work Tab, which is built in.
 
@@ -57,6 +60,7 @@ The Work tab headers and scroll-wheel priorities come from Compact Work Tab by C
     <li>Orion.Hospitality</li>
     <li>Orion.Therapy</li>
     <li>Mlie.RecycleThis</li>
+    <li>LazyFridayStudio.UIRethemed.Work</li>
     <li>keyz182.KeyzAllowUtilities</li>
     <li>Thek.GuardingP</li>
     <li>VanillaExpanded.VBooksE</li>

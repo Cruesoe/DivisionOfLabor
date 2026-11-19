@@ -4,19 +4,14 @@ using RimWorld;
 namespace DivisionOfLabor.WorkTab.Patches
 {
     /// <summary>
-    /// Recalculates the header height and priority range whenever the Work tab is rebuilt.
+    /// Recalculates the header height and priority range before the Work tab is rebuilt, so the rebuild sizes the headers with them.
     /// </summary>
     [HarmonyPatch(typeof(PawnTable), "RecacheIfDirty")]
     public static class Patch_PawnTable_RecacheIfDirty
     {
-        public static void Prefix(PawnTable __instance, bool ___dirty, out bool __state)
+        public static void Prefix(PawnTable __instance, bool ___dirty)
         {
-            __state = ___dirty && WorkTable.IsWorkTable(__instance);
-        }
-
-        public static void Postfix(PawnTable __instance, bool __state)
-        {
-            if (__state)
+            if (___dirty && WorkTable.IsWorkTable(__instance))
             {
                 HeaderCache.Recache(__instance);
             }

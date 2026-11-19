@@ -5,9 +5,9 @@
 
   <WorkTypeDef>
     <defName>DOL_Nurse</defName>
-    <labelShort>Nurse</labelShort>
+    <labelShort>nurse</labelShort>
     <pawnLabel>Nurse</pawnLabel>
-    <gerundLabel>Nursing</gerundLabel>
+    <gerundLabel>nursing</gerundLabel>
     <description>Care for the sick, bring them food, cheer them up, and perform assigned duties. Nurses will care for colonists, prisoners and animals.</description>
     <verb>Care for</verb>
     <naturalPriority>1250</naturalPriority>
@@ -22,9 +22,9 @@
 
   <WorkTypeDef>
     <defName>DOL_Butcher</defName>
-    <labelShort>Butcher</labelShort>
-    <pawnLabel>Butcherer</pawnLabel>
-    <gerundLabel>Butchering</gerundLabel>
+    <labelShort>butcher</labelShort>
+    <pawnLabel>Butcher</pawnLabel>
+    <gerundLabel>butchering</gerundLabel>
     <description>Create kibble and butcher meat.</description>
     <verb>Butcher</verb>
     <naturalPriority>975</naturalPriority>
@@ -42,9 +42,9 @@
 
   <WorkTypeDef>
     <defName>DOL_Deconstruct</defName>
-    <labelShort>Deconstruct</labelShort>
+    <labelShort>deconstruct</labelShort>
     <pawnLabel>Deconstructor</pawnLabel>
-    <gerundLabel>Deconstructing</gerundLabel>
+    <gerundLabel>deconstructing</gerundLabel>
     <description>Uninstall or deconstruct buildings, objects, floors and roofs.</description>
     <verb>Deconstruct</verb>
     <naturalPriority>925</naturalPriority>
@@ -62,9 +62,9 @@
 
   <WorkTypeDef>
     <defName>DOL_Repair</defName>
-    <labelShort>Repair</labelShort>
+    <labelShort>repair</labelShort>
     <pawnLabel>Repairer</pawnLabel>
-    <gerundLabel>Repairing</gerundLabel>
+    <gerundLabel>repairing</gerundLabel>
     <description>Repair damaged or broken-down buildings and objects.</description>
     <verb>Repair</verb>
     <naturalPriority>875</naturalPriority>
