@@ -39,7 +39,7 @@ namespace DivisionOfLabor.WorkTab.Patches
                 GUI.DrawTexture(sortingRect, tex);
             }
 
-            string label = __instance.def.workType.labelShort.CapitalizeFirst();
+            HeaderLabel label = HeaderCache.GetLabel(__instance.def.workType);
             Matrix4x4 originalMatrix = GUI.matrix;
             Rect labelRect;
             Matrix4x4 labelMatrix;
@@ -49,7 +49,7 @@ namespace DivisionOfLabor.WorkTab.Patches
                     (labelRect, labelMatrix) = LabelDrawer.DrawInclined(rect, label);
                     break;
                 case HeaderOrientation.Vertical:
-                    (labelRect, labelMatrix) = LabelDrawer.DrawVertical(rect, label);
+                    (labelRect, labelMatrix) = LabelDrawer.DrawVertical(rect, label.Text);
                     break;
                 default:
                     (labelRect, labelMatrix) = DrawStacked(rect, label);
@@ -82,21 +82,15 @@ namespace DivisionOfLabor.WorkTab.Patches
         }
 
         // Stacks up to four letters top to bottom, with a dot when the label is cut short.
-        private static (Rect rect, Matrix4x4 matrix) DrawStacked(Rect rect, string label)
+        private static (Rect rect, Matrix4x4 matrix) DrawStacked(Rect rect, HeaderLabel label)
         {
-            string stacked = string.Join("\n", label.Substring(0, Math.Min(4, label.Length)).ToCharArray());
-            if (label.Length > 4)
-            {
-                stacked += ".";
-            }
-
             TextAnchor anchor = Text.Anchor;
             GameFont font = Text.Font;
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Vector2 size = HeaderCache.GetVerticalRotatedSize(stacked);
+            Vector2 size = label.StackedSize;
             Rect labelRect = new Rect(rect.center.x - size.x / 2f, rect.yMax - size.y, size.x, size.y);
-            Widgets.Label(labelRect, stacked);
+            Widgets.Label(labelRect, label.Stacked);
             Text.Anchor = anchor;
             Text.Font = font;
             return (labelRect, GUI.matrix);

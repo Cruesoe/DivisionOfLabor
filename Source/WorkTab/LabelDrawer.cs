@@ -1,4 +1,4 @@
-using System.Reflection;
+using System;
 using HarmonyLib;
 using UnityEngine;
 using Verse;
@@ -12,18 +12,11 @@ namespace DivisionOfLabor.WorkTab
     {
         private static readonly Color LabelColor = new Color(0.8f, 0.8f, 0.8f);
 
-        private static readonly MethodInfo GetTopRectMethod = AccessTools.Method("UnityEngine.GUIClip:GetTopRect");
-        private static readonly MethodInfo UnclipMethod = AccessTools.Method("UnityEngine.GUIClip:Unclip", new[] { typeof(Vector2) });
-
-        private static Rect GetTopRect()
-        {
-            return (Rect)GetTopRectMethod.Invoke(null, null)!;
-        }
-
-        private static Vector2 Unclip(Vector2 position)
-        {
-            return (Vector2)UnclipMethod.Invoke(null, new object[] { position })!;
-        }
+        // GUIClip is internal to Unity (and to UnityStubs on 1.7); bound once as delegates.
+        private static readonly Func<Rect> GetTopRect =
+            AccessTools.MethodDelegate<Func<Rect>>(AccessTools.Method("UnityEngine.GUIClip:GetTopRect"));
+        private static readonly Func<Vector2, Vector2> Unclip =
+            AccessTools.MethodDelegate<Func<Vector2, Vector2>>(AccessTools.Method("UnityEngine.GUIClip:Unclip", new[] { typeof(Vector2) }));
 
         // Rotates the label 90 degrees counter-clockwise so it reads bottom to top.
         public static (Rect rect, Matrix4x4 matrix) DrawVertical(Rect rect, string label)
@@ -56,9 +49,10 @@ namespace DivisionOfLabor.WorkTab
         }
 
         // Rotates the label 60 degrees so its bottom-left corner sits at the bottom of the column's center line.
-        public static (Rect rect, Matrix4x4 matrix) DrawInclined(Rect rect, string label)
+        public static (Rect rect, Matrix4x4 matrix) DrawInclined(Rect rect, HeaderLabel header)
         {
-            Rect rotatedRect = new Rect(0f, 0f, rect.height, Text.CalcSize(label).y) { center = rect.center };
+            string label = header.Text;
+            Rect rotatedRect = new Rect(0f, 0f, rect.height, header.Size.y) { center = rect.center };
 
             float theta = 60f * Mathf.Deg2Rad;
             Vector2 corner = new Vector2(-rotatedRect.width / 2f, -rotatedRect.height / 2f);

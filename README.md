@@ -4,7 +4,7 @@ Splits RimWorld's broadest work types into focused jobs, so you can assign speci
 
 ## New work types
 
-- **Nurse** — rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery.
+- **Nurse** — rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick. Doctors keep tending and surgery. Unlike Warden, slaves can nurse, so they can feed prisoners.
 - **Butcher** — butcher table bills, for meat and kibble.
 - **Deconstruct** — deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
 - **Repair** — repairing and fixing broken-down buildings. Construction keeps building.
@@ -14,6 +14,7 @@ Splits RimWorld's broadest work types into focused jobs, so you can assign speci
 - Fishing sits next to Hunting, and plant cutting next to Growing.
 - Dark study joins Research.
 - Smoothing is Construction's lowest job, walls before floors.
+- Doctors tend their own wounds first, and tend animals before doing operations.
 - New colonies start with manual priorities turned on.
 - Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
 - Scroll over a priority box to change it.

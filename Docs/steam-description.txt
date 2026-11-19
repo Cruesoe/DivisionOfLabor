@@ -2,7 +2,7 @@
 
 [h2]New work types[/h2]
 [list]
-[*][b]Nurse[/b] covers rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick, while Doctors keep tending and surgery.
+[*][b]Nurse[/b] covers rescuing, taking patients to bed for operations, feeding colonists, prisoners and animals, hemogen, and visiting the sick, while Doctors keep tending and surgery. Unlike Warden, slaves can nurse, so they can feed prisoners.
 [*][b]Butcher[/b] covers butcher table bills, for meat and kibble.
 [*][b]Deconstruct[/b] covers deconstructing, uninstalling, clearing space for blueprints, filling in pits, and removing floors, roofs and foundations.
 [*][b]Repair[/b] covers repairing and fixing broken-down buildings, while Construction keeps building.
@@ -13,6 +13,7 @@
 [*]Fishing sits next to Hunting, and plant cutting next to Growing.
 [*]Dark study joins Research.
 [*]Smoothing is Construction's lowest job, walls before floors.
+[*]Doctors tend their own wounds first, and tend animals before doing operations.
 [*]New colonies start with manual priorities turned on.
 [*]Column headers are tilted so more work types fit on screen; the mod settings can turn them vertical, stack them, or leave them flat.
 [*]Scroll over a priority box to change it.
