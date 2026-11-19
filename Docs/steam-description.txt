@@ -31,6 +31,7 @@ These mods' jobs are folded in rather than left as separate columns:
 [*][b]VE Gravship[/b]: gravship maintenance joins Repair.
 [*][b]Guarding Pawns + Keyz Allow Utilities[/b]: finishing off joins guard duty.
 [/list]
+[b]UI Rethemed - Work[/b]'s templates include the new work types: Nurse for doctors and wardens, Butcher for cooks and fishers, and Repair and Deconstruct for builders and miners.
 The Work tab headers also work with Priority Master, Work Manager and Grouped Pawns Lists.
 Not compatible with Complex Jobs, Nurse Job, or Smooth Walls then Floor, because they change the same work types, or with Compact Work Tab, which is built in.
 Safe to add to an existing save. Requires Harmony.

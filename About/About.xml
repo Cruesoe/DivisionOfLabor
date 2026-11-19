@@ -22,6 +22,8 @@ Tidier Work tab:
 
 Supported mods are folded in rather than left as separate columns: Hospitality, Therapy, Simple Improve, Recycle This, Vanilla Books Expanded, Dubs Bad Hygiene, Vehicle Framework, VE Gravship, and Guarding Pawns with Keyz' Allow Utilities.
 
+UI Rethemed - Work's templates include the new work types.
+
 Safe to add to an existing save. Incompatible with Complex Jobs, Nurse Job, Smooth Walls then Floor, and Compact Work Tab, which is built in.
 
 The Work tab headers and scroll-wheel priorities come from Compact Work Tab by CaptainArbitrary, continued by Mlie, used under the MIT license.</description>
@@ -57,6 +59,7 @@ The Work tab headers and scroll-wheel priorities come from Compact Work Tab by C
     <li>Orion.Hospitality</li>
     <li>Orion.Therapy</li>
     <li>Mlie.RecycleThis</li>
+    <li>LazyFridayStudio.UIRethemed.Work</li>
     <li>keyz182.KeyzAllowUtilities</li>
     <li>Thek.GuardingP</li>
     <li>VanillaExpanded.VBooksE</li>

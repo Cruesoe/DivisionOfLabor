@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- [LFS] UI Rethemed - Work: its templates get this mod's work types at the priority of the job each came from -->
+
+  <!-- Nurse starts active, so templates that don't list it already give it the default 3 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Doctor"]/work</xpath>
+    <value>
+      <DOL_Nurse>1</DOL_Nurse>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Warden"]/work</xpath>
+    <value>
+      <DOL_Nurse>2</DOL_Nurse>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Cook"]/work</xpath>
+    <value>
+      <DOL_Butcher>2</DOL_Butcher>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Builder"]/work</xpath>
+    <value>
+      <DOL_Repair>2</DOL_Repair>
+      <DOL_Deconstruct>2</DOL_Deconstruct>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Miner"]/work</xpath>
+    <value>
+      <DOL_Repair>3</DOL_Repair>
+      <DOL_Deconstruct>3</DOL_Deconstruct>
+    </value>
+  </Operation>
+
+  <!-- Odyssey template: there only while the DLC is active -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Fisher"]/work</xpath>
+    <value>
+      <DOL_Butcher>3</DOL_Butcher>
+    </value>
+  </Operation>
+
+</Patch>
