@@ -32,7 +32,7 @@ Folded in rather than left as separate columns:
 - **VE Gravship** — gravship maintenance joins Repair.
 - **Guarding Pawns + Keyz Allow Utilities** — finishing off joins guard duty.
 
-UI Rethemed - Work's templates include the new work types: Nurse for doctors and wardens, Butcher for cooks and fishers, and Repair and Deconstruct for builders and miners.
+UI Rethemed - Work's templates include the new work types: Nurse for doctors and wardens, Butcher for cooks and fishers, and Repair and Deconstruct for builders and miners. Field rescue (Search and Rescue), diplomacy (These Are Our People), shopkeeping (RimMarket) and Haul+ (Keyz Allow Utilities) are added too.
 
 ## Compatibility
 

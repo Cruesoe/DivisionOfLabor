@@ -2,12 +2,16 @@
 <Patch>
 
   <!-- [LFS] UI Rethemed - Work: its templates get this mod's work types at the priority of the job each came from -->
+  <!-- Work types from other mods are listed too; one that isn't loaded is kept by the template and does nothing -->
 
-  <!-- Nurse starts active, so templates that don't list it already give it the default 3 -->
+  <!-- Nurse and Haul+ start active, so templates that don't list them already give them the default 3 -->
+  <!-- Search and Rescue: field rescue goes with Nurse -->
+  <!-- These Are Our People and RimMarket: diplomacy and shopkeeping go with Warden's social work -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Doctor"]/work</xpath>
     <value>
       <DOL_Nurse>1</DOL_Nurse>
+      <SAR_FieldRescue>1</SAR_FieldRescue>
     </value>
   </Operation>
 
@@ -15,6 +19,9 @@
     <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Warden"]/work</xpath>
     <value>
       <DOL_Nurse>2</DOL_Nurse>
+      <SAR_FieldRescue>3</SAR_FieldRescue>
+      <TAOP_Diplomacy>2</TAOP_Diplomacy>
+      <RimMarket_Shopkeeping>3</RimMarket_Shopkeeping>
     </value>
   </Operation>
 
@@ -38,6 +45,14 @@
     <value>
       <DOL_Repair>3</DOL_Repair>
       <DOL_Deconstruct>3</DOL_Deconstruct>
+    </value>
+  </Operation>
+
+  <!-- Keyz' Allow Utilities: Haul+ matches Hauling -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/UIRethemed.Work.WorkTemplateDef[defName="UIRethemedWork_Hauler"]/work</xpath>
+    <value>
+      <KAU_UrgentHaul>2</KAU_UrgentHaul>
     </value>
   </Operation>
 
