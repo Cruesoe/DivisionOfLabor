@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Search and Rescue - fold the Field Rescue work type into Doctor and Nurse; its priority checks read theirs (Source/SearchAndRescue) -->
+  <!-- Treatment jobs join Doctor above its own jobs, below tending to self; evacuation and capture join Nurse above rescuing -->
+  <!-- Work mechs keep using Search and Rescue's own mech jobs, so the moved jobs stay humanlike-only -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Doctor -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_TreatMarked" or defName="SAR_RepairMarkedMech" or defName="SAR_SupportiveCareMarkedNursing"]/priorityInType</xpath>
+        <value>
+          <priorityInType>420</priorityInType>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_AutomaticRoutineTreat"]/priorityInType</xpath>
+        <value>
+          <priorityInType>405</priorityInType>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_FollowupTreatMarked"]/priorityInType</xpath>
+        <value>
+          <priorityInType>385</priorityInType>
+        </value>
+      </li>
+
+      <!-- Nurse -->
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedHauling"]/priorityInType</xpath>
+        <value>
+          <priorityInType>660</priorityInType>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_CaptureMarked"]/priorityInType</xpath>
+        <value>
+          <priorityInType>620</priorityInType>
+        </value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedParamedic"]</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedParamedic"]/priorityInType</xpath>
+          <value>
+            <priorityInType>619</priorityInType>
+          </value>
+        </match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedGrimWorks"]</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedGrimWorks"]/priorityInType</xpath>
+          <value>
+            <priorityInType>590</priorityInType>
+          </value>
+        </match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_StrataRescueApproach"]</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/WorkGiverDef[defName="SAR_StrataRescueApproach"]/priorityInType</xpath>
+          <value>
+            <priorityInType>580</priorityInType>
+          </value>
+        </match>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedNursing"]</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/WorkGiverDef[defName="SAR_RescueMarkedNursing"]/priorityInType</xpath>
+          <value>
+            <priorityInType>560</priorityInType>
+          </value>
+        </match>
+      </li>
+
+      <li Class="PatchOperationRemove">
+        <xpath>/Defs/WorkGiverDef[workType="SAR_FieldRescue"]/canBeDoneByMechs</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/WorkGiverDef[workType="SAR_FieldRescue"]</xpath>
+        <value>
+          <canBeDoneByMechs>false</canBeDoneByMechs>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[workType="SAR_FieldRescue" and (defName="SAR_RescueMarkedHauling" or defName="SAR_CaptureMarked" or defName="SAR_RescueMarkedParamedic" or defName="SAR_RescueMarkedGrimWorks" or defName="SAR_StrataRescueApproach" or defName="SAR_RescueMarkedNursing")]/workType</xpath>
+        <value>
+          <workType>DOL_Nurse</workType>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/WorkGiverDef[workType="SAR_FieldRescue"]/workType</xpath>
+        <value>
+          <workType>Doctor</workType>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/WorkTypeDef[defName="SAR_FieldRescue"]</xpath>
+        <value>
+          <visible>false</visible>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+</Patch>
