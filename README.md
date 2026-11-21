@@ -29,7 +29,7 @@ Folded in rather than left as separate columns:
 - **Recycle This** — recycling and destroying join Crafting.
 - **Vanilla Books Expanded** — writing moves next to Art.
 - **Dubs Bad Hygiene** — patient care joins Nurse.
-- **Search and Rescue** — field rescue joins Doctor.
+- **Search and Rescue** — field rescue treatment joins Doctor, and evacuation and capture join Nurse.
 - **Vehicle Framework** — vehicle repair and disassembly join Repair and Deconstruct.
 - **VE Gravship** — gravship maintenance joins Repair.
 - **Guarding Pawns + Keyz Allow Utilities** — finishing off joins guard duty.

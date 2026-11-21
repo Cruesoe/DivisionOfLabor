@@ -6,7 +6,7 @@ using Verse;
 namespace DivisionOfLabor.SearchAndRescue
 {
     /// <summary>
-    /// Search and Rescue falls back to the Field Rescue priority for each of its jobs; it falls back to Doctor's instead.
+    /// Search and Rescue falls back to the Field Rescue priority for each of its jobs; it falls back to the job's own work type (Doctor or Nurse) instead.
     /// </summary>
     [HarmonyPatch]
     public static class Patch_Compatibility_DetailedWorkPriority
@@ -24,9 +24,14 @@ namespace DivisionOfLabor.SearchAndRescue
             return target!;
         }
 
-        public static void Prefix(ref WorkTypeDef __2)
+        public static void Prefix(WorkGiverDef __1, ref WorkTypeDef __2)
         {
-            FieldRescue.Redirect(ref __2);
+            if (__2 == null || __2 != FieldRescue.Def)
+            {
+                return;
+            }
+            WorkTypeDef? own = __1?.workType;
+            __2 = own != null && own != FieldRescue.Def ? own : WorkTypeDefOf.Doctor;
         }
     }
 }

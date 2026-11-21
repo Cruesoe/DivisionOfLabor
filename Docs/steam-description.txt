@@ -28,7 +28,7 @@ These mods' jobs are folded in rather than left as separate columns:
 [*][b]Recycle This[/b]: recycling and destroying join Crafting.
 [*][b]Vanilla Books Expanded[/b]: writing moves next to Art.
 [*][b]Dubs Bad Hygiene[/b]: patient care joins Nurse.
-[*][b]Search and Rescue[/b]: field rescue joins Doctor.
+[*][b]Search and Rescue[/b]: field rescue treatment joins Doctor, and evacuation and capture join Nurse.
 [*][b]Vehicle Framework[/b]: vehicle repair and disassembly join Repair and Deconstruct.
 [*][b]VE Gravship[/b]: gravship maintenance joins Repair.
 [*][b]Guarding Pawns + Keyz Allow Utilities[/b]: finishing off joins guard duty.
