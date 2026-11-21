@@ -28,11 +28,12 @@ These mods' jobs are folded in rather than left as separate columns:
 [*][b]Recycle This[/b]: recycling and destroying join Crafting.
 [*][b]Vanilla Books Expanded[/b]: writing moves next to Art.
 [*][b]Dubs Bad Hygiene[/b]: patient care joins Nurse.
+[*][b]Search and Rescue[/b]: field rescue joins Doctor.
 [*][b]Vehicle Framework[/b]: vehicle repair and disassembly join Repair and Deconstruct.
 [*][b]VE Gravship[/b]: gravship maintenance joins Repair.
 [*][b]Guarding Pawns + Keyz Allow Utilities[/b]: finishing off joins guard duty.
 [/list]
-[b]UI Rethemed - Work[/b]'s templates include the new work types: Nurse for doctors and wardens, Butcher for cooks and fishers, and Repair and Deconstruct for builders and miners. Field rescue (Search and Rescue), diplomacy (These Are Our People), shopkeeping (RimMarket) and Haul+ (Keyz Allow Utilities) are added too.
+[b]UI Rethemed - Work[/b]'s templates include the new work types: Nurse for doctors and wardens, Butcher for cooks and fishers, and Repair and Deconstruct for builders and miners. Diplomacy (These Are Our People), shopkeeping (RimMarket) and Haul+ (Keyz Allow Utilities) are added too.
 The Work tab headers also work with Priority Master, Work Manager and Grouped Pawns Lists.
 Not compatible with Complex Jobs, Nurse Job, or Smooth Walls then Floor, because they change the same work types, or with Compact Work Tab, which is built in.
 Safe to add to an existing save. Requires Harmony.
